@@ -1,76 +1,116 @@
-`timescale 1ns / 1ps
+module chess_clock_tb();
+  reg clk;
+  reg reset;
+  reg start;
+  reg surrender_player1;
+  reg surrender_player2;
+  reg switch_turn;
+  wire [6:0] seg_player1_min1;
+  wire [6:0] seg_player1_min0;
+  wire [6:0] seg_player1_sec1;
+  wire [6:0] seg_player1_sec0;
+  wire [6:0] seg_player2_min1;
+  wire [6:0] seg_player2_min0;
+  wire [6:0] seg_player2_sec1;
+  wire [6:0] seg_player2_sec0;
+  wire player1_green_led;
+  wire player2_green_led;
+  wire player1_red_led;
+  wire player2_red_led;
 
-module test_bench;
-    reg clk;
-    reg reset;
-    reg start;
-    reg pause;
-    reg player1_add_time;
-    reg player2_add_time;
-    wire [15:0] player1_time;
-    wire [15:0] player2_time;
-    wire player1_flag;
-    wire player2_flag;
+  // Instantiate the chess_clock module
+  chess_clock clock_inst (
+    .clk(clk),
+    .reset(reset),
+    .start(start),
+    .surrender_player1(surrender_player1),
+    .surrender_player2(surrender_player2),
+    .switch_turn(switch_turn),
+    .seg_player1_min1(seg_player1_min1),
+    .seg_player1_min0(seg_player1_min0),
+    .seg_player1_sec1(seg_player1_sec1),
+    .seg_player1_sec0(seg_player1_sec0),
+    .seg_player2_min1(seg_player2_min1),
+    .seg_player2_min0(seg_player2_min0),
+    .seg_player2_sec1(seg_player2_sec1),
+    .seg_player2_sec0(seg_player2_sec0),
+    .player1_green_led(player1_green_led),
+    .player2_green_led(player2_green_led),
+    .player1_red_led(player1_red_led),
+    .player2_red_led(player2_red_led)
+  );
 
-    // Instantiate the chess clock module
-    chess_clock uut (
-        .clk(clk),
-        .reset(reset),
-        .start(start),
-        .pause(pause),
-        .player1_add_time(player1_add_time),
-        .player2_add_time(player2_add_time),
-        .player1_time(player1_time),
-        .player2_time(player2_time),
-        .player1_flag(player1_flag),
-        .player2_flag(player2_flag)
-    );
+  // Clock generation
+  always begin
+    #5 clk = ~clk;
+  end
 
-    // Clock generation
-    always begin
-        #5 clk = ~clk;
-    end
+  // Display lines for test cases
+  initial begin
+    $display("Starting Test Cases");
+    $display("-------------------");
 
-    initial begin
-        // Initialize inputs
-        clk = 0;
-        reset = 0;
-        start = 0;
-        pause = 0;
-        player1_add_time = 0;
-        player2_add_time = 0;
+    // Stimulus generation
+    clk = 0;
+    reset = 1;
+    start = 0;
+    surrender_player1 = 0;
+    surrender_player2 = 0;
+    switch_turn = 0;
 
-        // Reset the clock
-        reset = 1;
-        #10 reset = 0;
+    // Apply reset and wait for a few clock cycles
+    #10 reset = 0;
+    $monitor("Time: Player 1 %d%d:%d%d, Player 2 %d%d:%d%d",
+      seg_player1_min1, seg_player1_min0, seg_player1_sec1, seg_player1_sec0,
+      seg_player2_min1, seg_player2_min0, seg_player2_sec1, seg_player2_sec0);
+    $display("Test Case 1: Reset");
+    $display("-------------------");
 
-        // Start the clock
-        start = 1;
+    // Start the timer
+    #10 start = 1;
 
-        // Simulate some clock cycles
-        #100;
+    // Test Case 2: Player 1's turn, player 2 surrenders
+    $monitor("Time: Player 1 %d%d:%d%d, Player 2 %d%d:%d%d",
+      seg_player1_min1, seg_player1_min0, seg_player1_sec1, seg_player1_sec0,
+      seg_player2_min1, seg_player2_min0, seg_player2_sec1, seg_player2_sec0);
+    $display("Test Case 2: Player 1's turn, player 2 surrenders");
+    $display("-------------------");
+    #100 surrender_player2 = 1;
+    #100 surrender_player2 = 0;
 
-        // Pause the clock
-        pause = 1;
+    // Test Case 3: Switching turns
+    $monitor("Time: Player 1 %d%d:%d%d, Player 2 %d%d:%d%d",
+      seg_player1_min1, seg_player1_min0, seg_player1_sec1, seg_player1_sec0,
+      seg_player2_min1, seg_player2_min0, seg_player2_sec1, seg_player2_sec0);
+    $display("Test Case 3: Switching turns");
+    $display("-------------------");
+    #100 switch_turn = 1;
+    #100 switch_turn = 0;
 
-        // Add time to player 1
-        player1_add_time = 1;
-        #50;
-        player1_add_time = 0;
+    // Test Case 4: Player 2's turn, player 1 surrenders
+    $monitor("Time: Player 1 %d%d:%d%d, Player 2 %d%d:%d%d",
+      seg_player1_min1, seg_player1_min0, seg_player1_sec1, seg_player1_sec0,
+      seg_player2_min1, seg_player2_min0, seg_player2_sec1, seg_player2_sec0);
+    $display("Test Case 4: Player 2's turn, player 1 surrenders");
+    $display("-------------------");
+    #100 surrender_player1 = 1;
+    #100 surrender_player1 = 0;
 
-        // Resume the clock
-        pause = 0;
+    // Test Case 5: Player 2's turn, player 2 wins
+    $monitor("Time: Player 1 %d%d:%d%d, Player 2 %d%d:%d%d",
+      seg_player1_min1, seg_player1_min0, seg_player1_sec1, seg_player1_sec0,
+      seg_player2_min1, seg_player2_min0, seg_player2_sec1, seg_player2_sec0);
+    $display("Test Case 5: Player 2's turn, player 2 wins");
+    $display("-------------------");
+    #100 switch_turn = 1;
+    #100 switch_turn = 0;
+    #100 switch_turn = 1;
+    #100 switch_turn = 0;
+    #100 switch_turn = 1;
+    #100 switch_turn = 0;
 
-        // Simulate some more clock cycles
-        #100;
-
-        // Stop the clock
-        start = 0;
-
-        // Simulate some more clock cycles
-        #50;
-
-        // End simulation
-        $finish;
-    end
+    // End simulation
+    $display("End of Test Cases");
+    $finish;
+  end
 endmodule
