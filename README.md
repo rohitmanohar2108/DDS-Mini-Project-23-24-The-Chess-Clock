@@ -105,4 +105,16 @@ When surrender pin is set to 1, It is in connection with start button, finally r
 
 ![image](https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/27e9c48e-943e-4fc2-9de1-2eb405021699)
 
+### Refrences
+
+https://sweetcode.io/logisim-software-digital-clock/
+
+https://en.wikipedia.org/wiki/Chess_clock
+
+https://digitalgametechnology.com/products/chess-clocks/dgt2010-official-fide-chess-clock
+
+https://ro.farnell.com/
+
+https://github.com/Ruben304/LogicDesign/blob/main/FINAL/digital_clk_12hr.v
+https://github.com/cadewey/Simple-Chess-Clock/tree/master/simplechessclock
 
