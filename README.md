@@ -90,8 +90,7 @@ This digital chess clock ensures fair play by limiting the time available for ea
 
 -**7-seg Display**
 
-￼	"
-￼"<img width="409" alt="image" src="https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/a00d2c42-5b74-440f-bfe8-9fd8c55fa7e8">
+￼	<img width="409" alt="image" src="https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/a00d2c42-5b74-440f-bfe8-9fd8c55fa7e8">
 
 ### Surrender logic
 
