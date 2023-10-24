@@ -1,7 +1,7 @@
 # The Chess Clock 
 
-![Chess Clock](<img width="288" alt="image" src="https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/41624ebf-6478-464a-af2c-60554d1f6497">
-)
+<img width="288" alt="image" src="https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/41624ebf-6478-464a-af2c-60554d1f6497">
+
 
 Chess, a timeless strategy game, has long relied on analog chess clocks for timed play. As the game evolves in the digital age, there is a growing need for a modern, versatile, and user-friendly digital chess clock system.
 
@@ -39,12 +39,12 @@ This project not only modernizes the traditional chess clock but also serves as 
 
 A digital clock designed for chess games. It mainly consists of two timers which cannot count at the same time. The source clock is alternatively transmitted between the two down counters using a switcher.
 
-![Schematic Diagram](<img width="282" alt="image" src="https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/d0a97024-e9a4-41c7-b000-1cc7a1639809">
-)
+<img width="282" alt="image" src="https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/d0a97024-e9a4-41c7-b000-1cc7a1639809">
+
 The following is a schematic diagram of the idea behind the implementation of this clock
 
-![Schematic Diagram](![image](https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/5af7991d-348a-4264-8eae-59d4eaee5f95)
-)
+(https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/5af7991d-348a-4264-8eae-59d4eaee5f95)
+
 
 ## 7 segment IC
 
