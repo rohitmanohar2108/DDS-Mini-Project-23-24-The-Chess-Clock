@@ -83,6 +83,19 @@ This digital chess clock ensures fair play by limiting the time available for ea
 When surrender pin is set to 1, It is in connection with start button, finally resulting in stoppage of the timer and declaring the winner with green light.
 </details>
 
+<!-- Fourth Section -->
+## Logisim Circuit Diagram
+<details>
+  <summary>Detail</summary>
+
+  > -**Clock IC**
+
+![image](https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/3c5d2d32-0f81-4e6a-9b3e-c3cf6f94c04f)
+
+
+![image](https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/27e9c48e-943e-4fc2-9de1-2eb405021699)
+
+</details>
 
 
 ## Abstract
