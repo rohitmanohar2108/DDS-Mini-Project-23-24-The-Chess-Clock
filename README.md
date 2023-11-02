@@ -19,7 +19,14 @@
   
 </details>
 
-Chess, a timeless strategy game, has long relied on analog chess clocks for timed play. As the game evolves in the digital age, there is a growing need for a modern, versatile, and user-friendly digital chess clock system.
+<!-- Second Section -->
+## Abstract
+<details>
+  <summary>Detail</summary>
+  
+  > A digital clock designed for chess games. It mainly consists of two timers which cannot count at the same time. The source clock is alternatively transmitted between the two down counters using a switcher
+
+</details>
 
 ## Table of Contents
 
