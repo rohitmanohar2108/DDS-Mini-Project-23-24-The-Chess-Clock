@@ -116,10 +116,12 @@ When surrender pin is set to 1, It is in connection with start button, finally r
 </details>
 
 ## Verilog Code
-<details>
-  <summary>Detail</summary>
 
-### Chess_clock.v
+<details>
+  <summary>Verilog Code</summary>
+
+```verilog
+// Chess_clock.v
  
  module chess_clock(
   input wire clk,             // Clock input
