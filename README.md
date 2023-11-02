@@ -1,7 +1,23 @@
 # The Chess Clock 
 
-<img width="288" alt="image" src="https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/41624ebf-6478-464a-af2c-60554d1f6497">
+<!-- Team Details -->
 
+## Team Members
+
+<details>
+  <summary>Detail</summary>
+
+  > Semister: 3rd Sem B.Tech CSE
+
+  > Section: S2
+
+  > Memeber-1: Abhyuday Rayala, 221CS239, rayalaabhyuday.221cs239@nitk.edu.in
+
+  > Member-2: Pramod Chaitanya Dandu, 221CS235, pramodchaitanya.221cs235@nitk.edu.in
+
+  > Member-3: Manohar Rohit Vijay, 221CS230, rohitvijaymanohar.221cs230@nit.edu.in
+  
+</details>
 
 Chess, a timeless strategy game, has long relied on analog chess clocks for timed play. As the game evolves in the digital age, there is a growing need for a modern, versatile, and user-friendly digital chess clock system.
 
