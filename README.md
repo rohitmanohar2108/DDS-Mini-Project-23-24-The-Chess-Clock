@@ -33,6 +33,12 @@
 <details>
   <summary>Detail</summary>
 
+  >### Timer Logic
+
+-**7-seg Display**
+
+￼	<img width="409" alt="image" src="https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/a00d2c42-5b74-440f-bfe8-9fd8c55fa7e8">
+
   > ### Game Start
 
 - When the 'start' button is pressed, the clock transitions to player 1's turn. Their timer starts counting down, and the other player's timer is paused.
