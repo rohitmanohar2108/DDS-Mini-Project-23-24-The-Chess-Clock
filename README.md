@@ -101,7 +101,7 @@ When surrender pin is set to 1, It is in connection with start button, finally r
 <details>
   <summary>Detail</summary>
 
- > module chess_clock(
+ module chess_clock(
   input wire clk,             // Clock input
   input wire reset,           // Reset signal for timers
   input wire start,           // Start signal for timers
