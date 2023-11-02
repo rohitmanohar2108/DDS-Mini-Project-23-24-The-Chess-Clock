@@ -51,13 +51,13 @@ The following is a schematic diagram of the idea behind the implementation of th
 <details>
   <summary>Detail</summary>
 
-  >### Timer Logic
+  ### Timer Logic
 
 -**7-seg Display**
 
 ￼	<img width="409" alt="image" src="https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/a00d2c42-5b74-440f-bfe8-9fd8c55fa7e8">
 
-  > ### Game Start
+  ### Game Start
 
 - When the 'start' button is pressed, the clock transitions to player 1's turn. Their timer starts counting down, and the other player's timer is paused.
 
@@ -106,7 +106,7 @@ When surrender pin is set to 1, It is in connection with start button, finally r
 <details>
   <summary>Detail</summary>
 
-  > -**Clock IC**
+   -**Clock IC**
 
 ![image](https://github.com/rohitmanohar2108/The-Chess-Clock/assets/122254093/3c5d2d32-0f81-4e6a-9b3e-c3cf6f94c04f)
 
