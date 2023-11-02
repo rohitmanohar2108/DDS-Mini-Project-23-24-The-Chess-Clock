@@ -23,6 +23,9 @@
 ## Abstract
 <details>
   <summary>Detail</summary>
+
+  ![Uploading image.png…]()
+
   
   > The aim of this mini project, "Development of a Digital Chess Clock System," is to address the shortcomings of traditional chess clocks and provide a solution that enhances the chess playing experience. With the advent of technology, we seek to offer a convenient and feature-rich alternative for chess enthusiasts and tournament organizers. This project introduces a state-of-the-art digital chess clock system that combines precision, usability, and flexibility.
 
