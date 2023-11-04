@@ -1,3 +1,4 @@
+//verilog and its testbench code 
 module chess_clock(
   input wire clk,             // Clock input
   input wire reset,           // Reset signal for timers
