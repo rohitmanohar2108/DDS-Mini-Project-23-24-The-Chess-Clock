@@ -11,7 +11,7 @@
 
   > Section: S2
 
-  > Memeber-1: Abhyuday Rayala, 221CS239, rayalaabhyuday.221cs239@nitk.edu.in
+  > Member-1: Abhyuday Rayala, 221CS239, rayalaabhyuday.221cs239@nitk.edu.in
 
   > Member-2: Pramod Chaitanya Dandu, 221CS235, pramodchaitanya.221cs235@nitk.edu.in
 
